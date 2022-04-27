@@ -99,7 +99,7 @@
 <img class="image4 tt" src="./images/notebook-of-contacts.png" width="70" height="70" id="cont" data-bs-placement="top" title="Contact Info:+91-7907140006 muhammedsirajudeen29@gmail.com">
 </div>
 <div class="col-md-4 col-lg-4 text-center p-3">
-  <img class="image2 tt" src="./images/skill.png" width="70" height="70" id="skill" data-bs-placement="top" title="Skillset">
+  <img class="image3 tt" src="./images/skill.png" width="70" height="70" id="skill" data-bs-placement="top" title="Skillset">
 </div>
 </div>
 </div>
@@ -211,11 +211,54 @@
           $("#body").toggleClass("body");
           $("#card2").toggleClass("card-2");
           $("#card3").toggleClass("card-3");
-          $("#card4").toggleClass("card-4")
+          $("#card4").toggleClass("card-4");
           
           
+          let dark_icon=$("#dark").attr("src");
           
-        })
+          dark_icon_path="./images/moon(1).png"
+          
+          if(dark_icon==dark_icon_path){
+            $("#dark").attr("src","./images/moon(2).png")//well work from this
+          }
+          else{
+            $("#dark").attr("src","./images/moon(1).png")
+          }
+
+          let icon_skill=$("#skill").attr("src")
+          console.log(icon_skill)
+          icon_skill_path="./images/skill.png"
+          if(icon_skill===icon_skill_path){
+            console.log("true")
+            $("#skill").attr("src","./images/pencil.png")
+          }
+          else{
+            console.log("false")
+            $("#skill").attr("src","./images/skill.png")
+          }
+          let icon_education=$("#educ").attr("src")
+          console.log(icon_skill)
+          icon_education_path="./images/open-book.png"
+          if(icon_education===icon_education_path){
+            console.log("true")
+            $("#educ").attr("src","./images/education.png")
+          }
+          else{
+            console.log("false")
+            $("#educ").attr("src","./images/open-book.png")
+          }
+          let icon_contact=$("#cont").attr("src")
+          
+          icon_contact_path="./images/notebook-of-contacts.png"
+          if(icon_contact===icon_contact_path){
+            
+            $("#cont").attr("src","./images/contactdark.png")
+          }
+          else{
+            
+            $("#cont").attr("src","./images/notebook-of-contacts.png")
+          }
+              })
          
       
           
